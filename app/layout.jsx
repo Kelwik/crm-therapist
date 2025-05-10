@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
       >
         {' '}
         <SidebarProvider>
-          <AppSidebar />
-          <main>
+          <AppSidebar className="bg-accent" />
+          <main className="my-2 p-2 rounded-2xl  w-full">
             <SidebarTrigger />
             {children}
           </main>

@@ -26,29 +26,24 @@ import { Card, CardContent } from './ui/card';
 // Menu items.
 const items = [
   {
-    title: 'Home',
+    title: 'Dashboard',
     url: '#',
     icon: Home,
   },
   {
-    title: 'Inbox',
+    title: 'Pasien',
     url: '#',
     icon: Inbox,
   },
   {
-    title: 'Calendar',
+    title: 'Jadwal',
     url: '#',
     icon: Calendar,
   },
   {
-    title: 'Search',
+    title: 'Email',
     url: '#',
     icon: Search,
-  },
-  {
-    title: 'Settings',
-    url: '#',
-    icon: Settings,
   },
 ];
 
@@ -69,14 +64,13 @@ export function AppSidebar() {
       <hr />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
-                      <item.icon />
+                      <item.icon size={24} />
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
@@ -91,7 +85,7 @@ export function AppSidebar() {
           <SidebarMenuItem className="flex content-end items-center p-2 gap-4 overflow-hidden">
             <CircleUserRound size={32} />
             <div className="flex flex-col w-fit">
-              <p className="text-base font-medium">Dr. Johnson Kennedy</p>
+              <p className="text-base font-normal">Dr. Johnson Kennedy</p>
               <p className="text-sm text-gray-500">Psychiatrist</p>
             </div>
           </SidebarMenuItem>
