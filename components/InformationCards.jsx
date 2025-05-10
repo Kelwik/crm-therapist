@@ -1,18 +1,18 @@
-import { Users } from 'lucide-react';
-import { Card } from './ui/card';
+import DashboardCard from './DashboardCard';
+import { Users, Calendar, TriangleAlert } from 'lucide-react';
 
 function InformationCards({ className }) {
   return (
-    <div className={`${className} grid grid-cols-3`}>
-      <Card className="w-72 p-4 h-25">
-        <div className="flex flex-row items-center gap-4 h-full">
-          <Users size={32} />
-          <div>
-            <p className="font-normal text-gray-500">Total Pasien</p>
-            <p className="font-semibold text-2xl">42</p>
-          </div>
-        </div>
-      </Card>
+    <div className={`${className} grid grid-cols-3 gap-2`}>
+      <DashboardCard info={'Total Pasien'} stats={42}>
+        <Users size={32} />
+      </DashboardCard>
+      <DashboardCard info={'Sesi Minggu Ini'} stats={42}>
+        <Calendar size={32} />
+      </DashboardCard>
+      <DashboardCard info={'Pasien Butuh Perhatian'} stats={42}>
+        <TriangleAlert size={32} />
+      </DashboardCard>
     </div>
   );
 }

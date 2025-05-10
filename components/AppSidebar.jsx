@@ -80,6 +80,7 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <hr />
       <SidebarFooter className={open ? '' : 'hidden'}>
         <SidebarMenu>
           <SidebarMenuItem className="flex content-end items-center p-2 gap-4 overflow-hidden">
